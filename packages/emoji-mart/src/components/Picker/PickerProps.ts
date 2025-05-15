@@ -99,6 +99,8 @@ export default {
     choices: ['auto', 'light', 'dark'],
   },
 
+  customStyle: null,
+
   // Data
   categories: null,
   categoryIcons: null,
