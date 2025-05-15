@@ -3,14 +3,14 @@ import { render } from 'preact'
 
 import { init, getProps } from '../../config'
 import { ShadowElement } from '../HTMLElement'
-import { Picker, PickerStyles } from '.'
+import { Picker } from '.'
 import PickerProps from './PickerProps'
 
 export default class PickerElement extends ShadowElement {
   static Props = PickerProps
 
   constructor(props) {
-    super(props, { styles: PickerStyles })
+    super(props)
   }
 
   async connectedCallback() {
