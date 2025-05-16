@@ -100,6 +100,9 @@ export default {
   },
 
   customStyle: null,
+  previewSize: {
+    value: 24,
+  },
 
   // Data
   categories: null,

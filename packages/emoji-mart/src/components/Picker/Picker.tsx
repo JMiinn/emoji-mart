@@ -691,7 +691,8 @@ export default class Picker extends Component {
     const emoji = this.getEmojiByPos(this.state.pos)
     const noSearchResults =
       this.state.searchResults && !this.state.searchResults.length
-
+    const previewEmojiSize =
+      this.props.previewSize ?? this.props.emojiButtonSize
     return (
       <div
         id="preview"
@@ -703,8 +704,8 @@ export default class Picker extends Component {
           <div
             class="flex flex-auto flex-middle flex-center"
             style={{
-              height: this.props.emojiButtonSize,
-              fontSize: this.props.emojiButtonSize,
+              height: previewEmojiSize,
+              fontSize: previewEmojiSize,
             }}
           >
             <Emoji
@@ -718,10 +719,11 @@ export default class Picker extends Component {
                       : 'point_up')
               }
               set={this.props.set}
-              size={this.props.emojiButtonSize}
+              size={previewEmojiSize}
               skin={this.state.tempSkin || this.state.skin}
               spritesheet={true}
               getSpritesheetURL={this.props.getSpritesheetURL}
+              className="preview-emoji"
             />
           </div>
 
